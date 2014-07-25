@@ -82,16 +82,26 @@ This the recommended approach to using WPezClasss.
 
 + In the end you should have the follow folder structure:
 
---\ mu-plugings
-----\ wp-ezclasses
-------\ ez-core
---------\ class-wp-ezclasses-ezcore-conditional-tags
---------\ class-wp-ezclasses-ezcore-devtools-log
---------\ class-wp-ezclasses-ezcore-methods-static
---------\ class-wp-ezclasses-ezcore-wp-enqueue
-----\ wp-ezclasses-autoload
-----\ wp-ezmu-plugins
-----\ wp-ezclasses-master-singleton
+-- mu-plugings
+
+---- wp-ezclasses
+
+------ ez-core
+
+-------- class-wp-ezclasses-ezcore-conditional-tags
+
+-------- class-wp-ezclasses-ezcore-devtools-log
+
+-------- class-wp-ezclasses-ezcore-methods-static
+
+-------- class-wp-ezclasses-ezcore-wp-enqueue
+
+---- wp-ezclasses-autoload
+
+---- wp-ezmu-plugins
+
+---- wp-ezclasses-master-singleton
+
 
 > Important - Please Note: We hear you grumbling. This bit could probably be simplified but we fear there would then be a loss of granularity and control. 
 > It's a one-shot deal that in total shouldn't take you longer than 30 to 45 minutes. The benefit is worth it. Once all this is in place, it's just a question
@@ -117,8 +127,8 @@ Great. Glad to hear you've made it this far. Let's do a quick example.
 
 
 
-5. "Wow. That's pretty cool. But what's with the long class names?"
--------------------------------------------------------------------
+5. "Wow. That's pretty cool. But what's up with the long class names?"
+----------------------------------------------------------------------
 
 Another great question. Glad you asked. Mainly it has to do with spl_autoload() and using the class name as a means to assist spl_autoload().
 
