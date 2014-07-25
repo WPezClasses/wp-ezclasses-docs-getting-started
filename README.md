@@ -57,6 +57,7 @@ Okay. Okay. These are the benefit / features of using WPezClasses:
 
 
 3. "Sounds good so far. How do I get started?"
+----------------------------------------------
 
 This the recommended approach to using WPezClasss. 
 
@@ -64,33 +65,33 @@ This the recommended approach to using WPezClasss.
 > on consistency. For example, you could "manually" do the include() / require() for each class but that's a pain in the ass. You also don't then benefit from 
 > spl_autoload (http://php.net/manual/en/function.spl-autoload.php (http://php.net/manual/en/function.spl-autoload.php)).
 
-+ Install / clone: https://github.com/WPezPlugins/wp-ezmu-plugins (https://github.com/WPezPlugins/wp-ezmu-plugins). 
++ Install / clone: https://github.com/WPezPlugins/wp-ezmu-plugins. 
 
 > The mu-plugins folder is used because it let's us load WPezClasses before anything else. Be sure to follow the instructions that come along with this repo. 
 
-+ As a mu-plugin install / clone: https://github.com/WPezPlugins/wp-ezclasses-autoload (https://github.com/WPezPlugins/wp-ezclasses-autoload).
++ As a mu-plugin install / clone: https://github.com/WPezPlugins/wp-ezclasses-autoload.
 
 > Within the folder mu-plugins / wp-ezclasses/ *eventually* you're going to need a parent folder for each (classes) grouping (e.g., admin). 
 > We'll explain this in detail shortly. For now just continue...
 
-+ Within the wp-ezclasses folder install / clone: https://github.com/WPezClasses/ezcore (https://github.com/WPezClasses/ezcore).
++ Within the wp-ezclasses folder install / clone: https://github.com/WPezClasses/ezcore.
 
 > FYI: ezCore are the most frequently used dependencies. Originally, these were "optional" but that didn't make sense when some were used so often (e.g., method-static).
 
-+ install / clone: https://github.com/WPezClasses/wp-ezclasses-master-singleton (https://github.com/WPezClasses/wp-ezclasses-master-singleton).
++ Install / clone: https://github.com/WPezClasses/wp-ezclasses-master-singleton.
 
 + In the end you should have the follow folder structure:
 
--- mu-plugings
----- wp-ezclasses
------- ez-core
--------- class-wp-ezclasses-ezcore-conditional-tags
--------- class-wp-ezclasses-ezcore-devtools-log
--------- class-wp-ezclasses-ezcore-methods-static
--------- class-wp-ezclasses-ezcore-wp-enqueue
----- wp-ezclasses-autoload
----- wp-ezmu-plugins
----- wp-ezclasses-master-singleton
+--\ mu-plugings
+----\ wp-ezclasses
+------\ ez-core
+--------\ class-wp-ezclasses-ezcore-conditional-tags
+--------\ class-wp-ezclasses-ezcore-devtools-log
+--------\ class-wp-ezclasses-ezcore-methods-static
+--------\ class-wp-ezclasses-ezcore-wp-enqueue
+----\ wp-ezclasses-autoload
+----\ wp-ezmu-plugins
+----\ wp-ezclasses-master-singleton
 
 > Important - Please Note: We hear you grumbling. This bit could probably be simplified but we fear there would then be a loss of granularity and control. 
 > It's a one-shot deal that in total shouldn't take you longer than 30 to 45 minutes. The benefit is worth it. Once all this is in place, it's just a question
@@ -99,22 +100,25 @@ This the recommended approach to using WPezClasss.
 
 
 4. "Okay. It took me closer to an hour but everything is in place. Now what?"
+-----------------------------------------------------------------------------
 
 Great. Glad to hear you've made it this far. Let's do a quick example.
 
 + Add a folder under wpezclasses called: admin.
 
-+ Wihin the  admin folder install / clone: https://github.com/WPezClasses/class-wp-ezclasses-admin-ui-cleanup-1-presets-1 (https://github.com/WPezClasses/class-wp-ezclasses-admin-ui-cleanup-1-presets-1).
++ Wihin the  admin folder install / clone: https://github.com/WPezClasses/class-wp-ezclasses-admin-ui-cleanup-1-presets-1.
 
-+ Wihin the  admin folder install / clone: https://github.com/WPezClasses/class-wp-ezclasses-admin-ui-cleanup-1 (https://github.com/WPezClasses/class-wp-ezclasses-admin-ui-cleanup-1).
++ Wihin the  admin folder install / clone: https://github.com/WPezClasses/class-wp-ezclasses-admin-ui-cleanup-1.
 
-+ In your regular plugin folder install / clone: https://github.com/WPezPlugins/wp-ezplugins-admin-ui-cleanup-1 (https://github.com/WPezPlugins/wp-ezplugins-admin-ui-cleanup-1).
++ In your regular plugin folder install / clone: https://github.com/WPezPlugins/wp-ezplugins-admin-ui-cleanup-1. 
 
 > Important - Please Note: Before you activate the plugin have a look at the plugin's code. Notice how much is NOT in the plugin. Now have a look at the two classes
 > you installed / cloned into the wp-ezclasses / admin folder. 
 
 
+
 5. "Wow. That's pretty cool. But what's with the long class names?"
+-------------------------------------------------------------------
 
 Another great question. Glad you asked. Mainly it has to do with spl_autoload() and using the class name as a means to assist spl_autoload().
 
