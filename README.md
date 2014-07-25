@@ -225,3 +225,12 @@ Instead, we stuck with KISS. Yes, it added a bit of overhead, but it also mainta
 
 Link: http://www.git-scm.com/book/en/Git-Tools-Submodules
 
+
+
+
+8."What's up with the class wp-ezclasses-master-singleton?"
+-----------------------------------------------------------
+
+The inspiration for that approach came from Scott Taylor:
+
+http://scotty-t.com/2012/07/09/wp-you-oop/
