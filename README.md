@@ -1,7 +1,7 @@
 WPezClasses
 ===========
 
-Getting Started: 0.0.2
+Getting Started: 0.0.3
 ======================
 
 Alpha / Draft - That is, there could be typos, misspellings, etc.
@@ -29,7 +29,7 @@ But before we get to that, let's discuss who you are and how you're probably usi
 
 + You are: At least somewhat experienced building WP themes and/or WP plugins.
 + You are: Comfortable with the basics of PHP OOP. 
-+ You do: Mostly custom WP development and WP customization, as opposed to themes and plugins (either premium or for the WP.org repos)*.
++ You do: Mostly custom WP development and WP customization, as opposed to "general public" themes and plugins (either premium or for the WP.org repos)*.
 + You have: Experienced time-sucks from hell trying to find meaningful answers and The Google and The Bing are of little help**.
 + You have: Planted open palm to forehead and said, "There's got to be a better way."
 
@@ -51,13 +51,13 @@ Okay. Okay. These are the major benefits / features of using WPezClasses:
 + Modularity - Each class aims to solve *a* WP problem. Ideally bloat and over-ambitiousness is mitigated as much as possible. 
 + Productivity - Rather than reinventing wheel after wheel, you just reach into your WPezClasses toolbox and make some magic happen. 
 + Community - As others contribute new code and/or vet current code, the product gets bigger, stronger and more reliable for everyone. 
-+ Growth - The potential here is endless. Getting on board now means more time saved sooner. And if you don't do it your competition might. 
++ Growth - The potential here is endless. Getting on board now means more time saved sooner. And if you don't jump in your competition might. 
 + Mindlessness - For all practical purposes WPezClasses acts and feels as if it's part of WP core. It's just there: 24 / 7 / 365 loving you unconditionally. 
 
 
 Here are some more bits that hopefully excite you:
 
-+ Granular - We consider each class to be its own sub-product, and therefore has it's own repo. Clone what you want, leave what you don't, come back for more some other time. 
++ Choice - We consider each class to be its own sub-product, and therefore has it's own repo. Clone what you want, leave what you don't, come back for more some other time. 
 + Consistency - Atypical as some of them might be, the coding patterns make sense and are easy to follow.
 + Death - Along the same lines as Mindlessness; putting "...and copy and paste it into your functions.php" to death would be a giant step forward. 
 + Flexibility - It's all OOP. If there's a method you don't like then exend the class and overide it. You don't have to copy & paste whole chunks of someone else's code just to change a couple lines.  
@@ -69,8 +69,27 @@ Here are some more bits that hopefully excite you:
 
 
 
-3. "Sounds good so far. How do I get started?"
-----------------------------------------------
+3."Before we go on: Why don't you just put it all together in a single repo?"
+-----------------------------------------------------------------------------
+
+Choice, control and community are important elements in the WPezClasses DNA. 
+
+Choice means you only have to clone what you need. Nothing more and nothing less. Otherwise, as they say, "Mo' code. Mo' problems." Bloat, even out of the 
+way and unused bloat is still bloat. 
+
+Control means if two different classes are updated and you're really only interested in one of those updates then that one class is all you need to update. 
+We didn't want to add friction and force anyone to do anything. 
+
+Community means anyone outside of this WPezClasses GitHub organization can develop and share classes that are "WPezClasses compatible." That is, they follow 
+the naming convention and (possibly) lean on ezcore or other classes in the framework. In short, the lack of a single plugin keeps possibilities as open as possible. 
+
+Yes, the multi-repo approach makes the setup somewhat awkward. But it's worth it. In the end you gain choice over what you use, control over when you update it, 
+and you're able to develop your own WPezClasses outside this initial effort.
+
+
+
+4. "Thanks for clearing that up. Sounds good so far. How do I get started?"
+---------------------------------------------------------------------------
 
 This the recommended approach to using WPezClasss. 
 
@@ -117,13 +136,13 @@ This the recommended approach to using WPezClasss.
 ---- wp-ezclasses-master-singleton
 
 
-> Important - Please Note: We hear you grumbling. This bit could probably be simplified but we fear there would then be a loss of granularity and (you having total) control. 
+> Important - Please Note: We hear you grumbling. This bit could probably be simplified but we fear there would then be a loss of choice and (you having total) control. 
 > It's a one-shot deal that in total shouldn't take you longer than 30 to 45 minutes. The benefit is worth it. Once all this is in place, it's just a question
 > of adding more repos / classes in the correct parent folders. 
 
 
 
-4. "Okay. It took me closer to an hour but everything is in place. Now what?"
+5. "Okay. It took me closer to an hour but everything is in place. Now what?"
 -----------------------------------------------------------------------------
 
 Great. Glad to hear you've made it this far. Now let's do a quick example.
@@ -170,7 +189,7 @@ Great. Glad to hear you've made it this far. Now let's do a quick example.
 
 
 
-5. "Wait. Sorry. I don't get it. Help?"
+6. "Wait. Sorry. I don't get it. Help?"
 ---------------------------------------
 
 No problem. Here's the deal:
@@ -197,7 +216,8 @@ You know where to find it if you need. You make a quick adjustment if necessary.
 
 
 
-6. "Wow. That's pretty cool. But what's up with the long class names?"
+
+7. "Wow. That's pretty cool. But what's up with the long class names?"
 ----------------------------------------------------------------------
 
 Another great question. Glad you asked. Mainly it has to do with spl_autoload() and using the class name (parsed) as a means to assist spl_autoload().
@@ -216,7 +236,7 @@ Here's the segment by segment breakdown:
 
 
 
-7."Why don't you use Git submodules?"
+8."Why don't you use Git submodules?"
 --------------------------------------
 
 That was considered but then ruled out for a number of reason. Mainly because most people are probably not familiar with them. 
@@ -228,7 +248,7 @@ Link: http://www.git-scm.com/book/en/Git-Tools-Submodules
 
 
 
-8."What's up with the class wp-ezclasses-master-singleton?"
+9."What's up with the class wp-ezclasses-master-singleton?"
 -----------------------------------------------------------
 
 The inspiration for that approach came from Scott Taylor:
