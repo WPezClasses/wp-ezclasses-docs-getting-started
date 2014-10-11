@@ -1,11 +1,11 @@
-WPezClasses
-===========
+# Org: WPezClasses
+### Getting Started: 0.0.4
 
-Getting Started: 0.0.3
-======================
+##### WPezClasses is an OOP-based WordPress framework that aims to make WP development ez (or at least easier).
 
-Alpha / Draft - That is, there could be typos, misspellings, etc.
------------------------------------------------------------------
+**This document is an Alpha / Draft. That is, there could be typos, misspellings, etc.**
+
+=========================================================================================================
 
 ###Overview
 
@@ -14,8 +14,9 @@ it's simply a series of classes that you might use, just as you use the traditio
 WPezClasses is just there. Waiting. 
 
 Naturally, there is a bit of (short term) setup involved in order to fully benefit from the (long term and ongoing) reduction in friction. 
-This document will walk you though the setup, as well as answer any other questions you might have. If we missed something you can use: faq.gh [at] wpezclasses.com
+This document will walk you though the setup, as well as answer any other questions you might have. 
 
+If anything has been missed you can use: faq.gh [at] wpezclasses.com
 
 =========================================================================================================
 
@@ -30,7 +31,7 @@ But before we get to that, let's discuss who you are and how you're probably usi
 + You are: At least somewhat experienced building WP themes and/or WP plugins.
 + You are: Comfortable with the basics of PHP OOP. 
 + You do: Mostly custom WP development and WP customization, as opposed to "general public" themes and plugins (either premium or for the WP.org repos)*.
-+ You have: Experienced time-sucks from hell trying to find meaningful answers and The Google and The Bing are of little help**.
++ You have: Experienced time-sucks from hell trying to find meaningful WP answers and The Google and The Bing have proven to be of little help**.
 + You have: Planted open palm to forehead and said, "There's got to be a better way."
 
 
@@ -64,8 +65,8 @@ Here are some more bits that hopefully excite you:
 + Open Source - We hope you stay and help, but if you fork it that makes us feel good too. 
 
 > FYI: The objective of WPezClasses isn't to solve every problem, in full, for every possibility, all the time. It's a framework, not a religious experience. 
-> Success is defined as saving 10% to 20% in dev time and ongoing maintence. That might not sound like much, but when doing bespoke WP work, that's half 
-> a day to a whole day per week. The more time WPezClasses saves you, the more time you'll have for anything else.
+> Success is defined as saving approx 20% in dev time and ongoing maintence. That might not sound like much, but when doing bespoke WP work, that's about 
+> a day's work per week. Wouldn't you love to have an extra day per week? The more time WPezClasses saves you, the more time you'll have for anything else.
 
 
 
@@ -74,13 +75,13 @@ Here are some more bits that hopefully excite you:
 
 Choice, control and community are important elements in the WPezClasses DNA. 
 
-Choice means you only have to clone what you need. Nothing more and nothing less. Otherwise, as they say, "Mo' code. Mo' problems." Bloat, even out of the 
-way and unused bloat is still bloat. 
+**Choice** means you only have to clone what you need. Nothing more and nothing less. Otherwise, as they say, "Mo' code. Mo' problems." Bloat, even out of the 
+way and unused bloat is still bloat. And one dev's "I want it all" is another dev's "I have bloat."
 
-Control means if two different classes are updated and you're really only interested in one of those updates then that one class is all you need to update. 
-We didn't want to add friction and force anyone to do anything. 
+**Control** means if two different classes are updated and you're really only interested in one of those updates then that one class is all you need to update. 
+Single repos mitigates friction and doesn't force anyone to do anything. 
 
-Community means anyone outside of this WPezClasses GitHub organization can develop and share classes that are "WPezClasses compatible." That is, they follow 
+**Community** means anyone outside of this WPezClasses GitHub organization can develop and share classes that are "WPezClasses compatible." That is, they follow 
 the naming convention and (possibly) lean on ezcore or other classes in the framework. In short, the lack of a single plugin keeps possibilities as open as possible. 
 
 Yes, the multi-repo approach makes the setup somewhat awkward. But it's worth it. In the end you gain choice over what you use, control over when you update it, 
@@ -93,8 +94,8 @@ and you're able to develop your own WPezClasses outside this initial effort.
 
 This the recommended approach to using WPezClasss. 
 
-> * Important - Please Note: Given the modular / granular approach there are probably workable variations. Any of those are up to you. We prefer to lean 
-> on consistency. For example, you could "manually" do the include() / require() for each class but that's a pain in the ass. You also don't then benefit from 
+> * Important - Please Note: Given the modular / granular approach there are probably workable variations. Any of those are up to you. The ez DNA prefers to lean 
+> on consistency. For example, you could "manually" do the include() / require() for each class but that's a pain in the arse. You also don't then benefit from 
 > spl_autoload (http://php.net/manual/en/function.spl-autoload.php).
 
 + Install / clone: https://github.com/WPezPlugins/wp-ezmu-plugins. 
@@ -109,7 +110,7 @@ This the recommended approach to using WPezClasss.
 
 + Within the wp-ezclasses folder install / clone: https://github.com/WPezClasses/ezcore.
 
-> FYI: ezCore are the most frequently used dependencies. Originally, these were "optional" but that didn't make sense when some were used so often (e.g., method-static).
+> FYI: ezCore are the most frequently used dependencies. Originally, these were "optional" but that didn't make sense when some were used so often (e.g., the method-static class).
 
 + Install / clone: https://github.com/WPezClasses/wp-ezclasses-master-singleton.
 
@@ -197,7 +198,7 @@ No problem. Here's the deal:
 Think of class-wp-ezclasses-admin-ui-cleanup-1-presets-1 as the "fuel". It's the setting for series of commonly used filters and actions for cleaning up the Admin UI. For example, 
 remove the Yoast SEO stuff. The idea is to get rid of "How do I do that again?" or "Where did I put that snippet?" 
 
->> No offense Yoasty. It's just that the issue comes up often enough that we wanted to make it ez for people to adjust such things to their own liking / project / client.
+>> No offense to Yoast. It's just that the issue comes up often enough that we wanted to make it ez for people to adjust such things to their own liking / project / client.
 
 Now think of class-wp-ezclasses-admin-ui-cleanup-1 as the "engine". It takes the fuel and executes / implements the various setttings as defined in class-wp-ezclasses-admin-ui-cleanup-1-presets-1's method admin_ui_cleanup_presets_combinations().
 
@@ -213,7 +214,6 @@ on a project by project basis.
 
 Could we / you build a UI for this? Yeah, probably. But in the case of "set it once and forget it" type things a UI is overkill. It's bloat. Instead, the code is tucked into a plugin. 
 You know where to find it if you need. You make a quick adjustment if necessary. Done. Less code (i.e., UI) means less stuff to go wrong. 
-
 
 
 
@@ -237,14 +237,13 @@ Here's the segment by segment breakdown:
 
 
 8."Why don't you use Git submodules?"
---------------------------------------
+-------------------------------------
 
 That was considered but then ruled out for a number of reason. Mainly because most people are probably not familiar with them. 
 
-Instead, we stuck with KISS. Yes, it added a bit of overhead, but it also maintained the ideal of giving you as much control as reasonable possible. 
+Instead, the ez DNA tries to stick with KISS. Yes, it added a bit of overhead, but it also maintained the ideal of giving you as much control as reasonably possible. 
 
-Link: http://www.git-scm.com/book/en/Git-Tools-Submodules
-
+FYI: http://www.git-scm.com/book/en/Git-Tools-Submodules
 
 
 
